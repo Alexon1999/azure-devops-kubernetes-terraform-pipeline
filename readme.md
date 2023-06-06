@@ -55,3 +55,16 @@ create table exchange_value
 ```
 docker container run --publish 8000:8000 in28min/currency-exchange:0.0.1-SNAPSHOT
 ```
+
+# Azure
+```
+install azure-cli
+$ brew install azure-cli
+$ az login
+
+create a service account
+$ az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/<<subscription_id>>"
+
+create ssh public key
+ssh-keygen -m PEM -t rsa -b 4096
+```
